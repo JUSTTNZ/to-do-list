@@ -120,9 +120,9 @@ listContainer.addEventListener("click", function(e){
 },false)
 
 function saveTask(){
-    localStorage.setItem("data", listContainer.innerHTML)
+    localStorage.setItem("data", JSON.stringify(listContainer.innerHTML))
 }
 
 function bringTask(){
-    listContainer.innerHTML = localStorage.getItem("data")
+    listContainer.innerHTML = JSON.parse(localStorage.getItem("data"))
 }
